@@ -9,14 +9,16 @@ storing the first 3 gifs from the response in its component state, and passing t
 It will also render a GifSearch component that renders the form. 
 GifListContainer should pass down a submit handler function to GifSearch as a prop.*/
 
-import { useState } from "react"
+import { useState,useEffect } from "react"
+import GifList from "./GifList"
+import GifSearch from "./GifSearch"
 
 function GifListContainer(){
     const giphyApi="https://api.giphy.com/v1/gifs/search?q=YOUR QUERY HERE&api_key=KolQWiJqBKWwEQFoSetwZAp7QSpM5jsD"
     const[data,setdata]=useState([])
     const[input,setInput]=useState()
 
-    function handleSubmit(){
+    function handleSubmit(e){
      e.preventDefault()
      
      setInput(input)

@@ -10,7 +10,7 @@ GifSearch should receive a callback prop from its parent. On a submit event,
  that will actually query the API with the text the user has entered*/
 
  /*import { useState } from "react";*/
-import GifListContainer from "./GifListContainer";
+
 
  function GifSearch({input},setInput,handleSubmit){
     /*const[input,setInput]=useState()*/
